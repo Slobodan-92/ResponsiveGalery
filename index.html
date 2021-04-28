@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreiranje Responsive Galerije</title>
+
+    <style>
+        #main-container {
+            font-family: sans-serif;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #header {
+            padding: 15px;
+        }
+
+        #galery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+        }
+
+        .tile {
+            width: 120px;
+            box-shadow: 4px 4px 8px #ebeaea;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .tile-bacground {
+            height: 70px;
+            background-color: rgb(56, 149, 192);
+            background-image: url(placeholder-image.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tile-text {
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #description {
+            font-size: calc(13px + (21 - 13) * ((100vw - 320px) / (1600 - 320)));
+            padding: 15px;
+        }
+
+        @media screen and (min-width:768px) {
+            #galery {
+                grid-template-columns: repeat(5, 1fr);
+                align-items: center;
+                grid-template-rows: 150px 150px;
+                grid-gap: 8px
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            #galery {
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                grid-template-rows: repeat(4, 150px);
+                grid-gap: 8px
+            }
+        }
+
+        @media screen and (max-width:414px) {
+            #galery {
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(10, 150px);
+                justify-items: center;
+            }
+
+            h3 {
+                text-align: center;
+            }
+        }
+
+
+        @media screen and (max-width: 319px) {
+            p {
+                font-size: 13px;
+            }
+        }
+
+        @media screen and (min-width: 1600px) {
+            p {
+                font-size: 21px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main-container">
+        <header id="header">
+            <h3>Galery Header</h3>
+        </header>
+        <div id="galery">
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+            <div class="tile">
+                <div class="tile-bacground"></div>
+                <div class="tile-text">Image Title</div>
+            </div>
+        </div>
+        <div id="description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
